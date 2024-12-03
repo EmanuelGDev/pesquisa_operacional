@@ -1,5 +1,5 @@
 class calcularGET:
-    def calcular_gasto_energetico(peso, altura, idade, sexo, nivel_atividade, objetivo):
+    def calcular_gasto_energetico(self, peso, altura, idade, sexo, nivel_atividade, objetivo):
 
         if sexo == "masculino":
             tmb = 10 * peso + 6.25 * altura - 5 * idade + 5
@@ -24,7 +24,7 @@ class calcularGET:
 
         return get
 
-    def calcular_nutrientes(get):
+    def calcular_nutrientes(self, get):
         """
         Calcula a distribuição de macronutrientes e micronutrientes baseada no GET.
         """
@@ -52,7 +52,7 @@ class calcularGET:
             "magnesio": magnesio
         }
 
-
+'''
 calculador = calcularGET
 # Entrada do usuário
 peso = float(input("Digite seu peso (kg): "))
@@ -71,3 +71,4 @@ print("\nSuas necessidades diárias são:")
 for chave, valor in nutrientes.items():
     unidade = "g" if chave in ["proteinas", "carboidratos", "gorduras"] else "kcal" if chave == "calorias" else "mg"
     print(f"{chave.capitalize()}: {valor} {unidade}")
+'''

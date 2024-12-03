@@ -1,0 +1,71 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Alimentos</title>
+
+    <!--  <link rel="stylesheet" type="text/css" href="{% static 'css/reset.css' %}">  -->>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <!-- NavBar -->
+    <nav>
+        <img src="" alt="Logo aqui">
+        <a href="{% url 'principal' %}">Início</a>
+        <span>Alimentos Cadastrados</span>
+    </nav>
+
+    <!-- Conteúdo -->
+    <h1>Alimentos Cadastrados</h1>
+    {% if alimentos %}
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Proteina</th>
+                    <th>Caloria</th>
+                    <th>Carboidrato</th>
+                    <th>Gordura</th>
+                    <th>Sódio</th>
+                    <th>Vitamina C</th>
+                    <th>Ferro</th>
+                    <th>Magnésio</th>
+                    <th>Cálcio</th>
+                    <th>Preço</th>
+                    <th>Ação</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for alimento in alimentos %}
+                    <tr>
+                        <td>{{ alimento.nome }}</td>
+                        <td>{{ alimento.proteina }}</td>
+                        <td>{{ alimento.caloria }}</td>
+                        <td>{{ alimento.carboidrato }}</td>
+                        <td>{{ alimento.gordura }}</td>
+                        <td>{{ alimento.sodio }}</td>
+                        <td>{{ alimento.vitaminaC }}</td>
+                        <td>{{ alimento.ferro }}</td>
+                        <td>{{ alimento.magnesio }}</td>
+                        <td>{{ alimento.calcio }}</td>
+                        <td>{{ alimento.preco }}</td>
+                        <td>
+                            <form method="post">
+                                {% csrf_token %}
+                                <button type="submit" name="deletar" value="{{ alimento.id }}">Deletar</button>
+                            </form>
+                        </td>                        
+                    </tr>
+                {% endfor %}                
+            </tbody>
+        </table>
+    {% else %}
+        <div>Não há alimentos cadastrados.</div>
+    {% endif %}
+    
+    <a href="{% url 'cadastrarAlimentos' %}">Cadastrar +</a>
+</body>
+</html>

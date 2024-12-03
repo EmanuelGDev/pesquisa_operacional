@@ -1,0 +1,57 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+
+    <!--  <link rel="stylesheet" type="text/css" href="{% static 'css/reset.css' %}">  -->>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <!-- NavBar -->
+    <nav>
+        <img src="" alt="Logo aqui">
+        <span>Início</span>
+        <a href="{% url 'listarAlimentos' %}">Alimentos Cadastrados</a>
+    </nav>
+    
+    <!-- Conteúdo -->
+    <form method="post">
+        {% csrf_token %}
+        <label>Peso:
+            <input type="number" name="peso" step="0.01">
+        </label>
+        <label>Altura:
+            <input type="number" name="altura">
+        </label>   
+        <label>Idade:
+            <input type="number" name="idade">
+        </label>
+        <label>Sexo:
+            <select name="sexo">
+                <option value="masculino">Masculino</option>
+                <option value="feminino">Feminino</option>
+            </select>
+        </label>
+        <label>Nível de Atividade:
+            <select name="atividade">
+                <option value="sedentário">Sedentário</option>
+                <option value="leve">Leve</option>
+                <option value="moderado">Moderado</option>
+                <option value="intenso">Intenso</option>
+            </select>
+        </label>
+        <label>Objetivo:
+            <select name="objetivo">
+                <option value="diminuir">Diminuir</option>
+                <option value="manter">Manter</option>
+                <option value="aumentar">Aumentar</option>
+            </select>
+        </label>
+        <button type="submit">Gerar Dieta+</button>
+    </form>
+</body>
+</html>

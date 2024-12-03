@@ -1,0 +1,58 @@
+<!-- Não apagar a tag abaixo -->
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastrar Alimento</title>
+
+    <!--  <link rel="stylesheet" type="text/css" href="{% static 'css/reset.css' %}">  -->>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <!-- Conteúdo -->
+    <h1>Tela De cadastro</h1>
+    <form method="post">
+        <!-- Não apagar a tag abaixo -->
+        {% csrf_token %}
+
+        <!-- Input das informações do alimento -->
+        <label>Nome Do Alimento:
+            <input type="text" name="nome" placeholder="Nome do Alimento">
+        </label>
+        <label>Calorias:
+            <input type="number" name="caloria" step="0.01" placeholder="Caloria em kcal">
+        </label>
+        <label>Ferro:
+            <input type="number" name="ferro" step="0.01" placeholder="Ferro em mg">
+        </label>
+        <label>Carboidratos:
+            <input type="number" name="carboidrato" step="0.01" placeholder="Carboidratro em g">
+        </label>
+        <label>Proteinas:
+            <input type="number" name="proteina" step="0.01" placeholder="Proteina em g">
+        </label>
+        <label>Magnésio:
+            <input type="number" name="magnesio" step="0.01" placeholder="Magnésio em mg">
+        </label>
+        <label>Gorduras Totais:
+            <input type="number" name="gordura" step="0.01" placeholder="Gordura em g">
+        </label>
+        <label>Sódio:
+            <input type="number" name="sodio" step="0.01" placeholder="Sódio em mg">
+        </label>
+        <label>Cálcio:
+            <input type="number" name="calcio" step="0.01" placeholder="Cálcio em mg">
+        </label>
+        <label>vitamina C:
+            <input type="number" name="vitaminaC" step="0.01" placeholder="Vitamina C em mg">
+        </label>
+        <label>Preço:
+            <input type="number" name="preco" step="0.01" placeholder="Preço em R$">
+        </label>
+        <button type="submit">Cadastrar</button>
+    </form>
+</body>
+</html>
