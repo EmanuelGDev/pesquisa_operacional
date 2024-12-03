@@ -6,16 +6,16 @@
 -[**Evelen Pinheiro**](https://github.com/EveeOliveira)
 📧 Email: evelenpinheiro62@gmail.com
 
--[**Emanuel Guimarães**](https://github.com/EveeOliveira)
+-[**Emanuel Guimarães**](https://github.com/EmanuelGDev)
 📧 Email: emanuel.gui.santana@gmail.com
 
--[**Marcos Braga**](https://github.com/EveeOliveira)
+-[**Marcos Braga**](https://github.com/MarcosBraga1)
 📧 Email: dudusilvabraga@hotmail.com
 
--[**Robson Campos**](https://github.com/EveeOliveira)
+-[**Robson Campos**](https://github.com/robsujunior)
 📧 Email: robson1144junior@gmail.com
 
--[**Samuel Monteiro**](https://github.com/EveeOliveira)
+-[**Samuel Monteiro**](https://github.com/samuelassuncao)
 📧 Email: samuel.coutoassuncao@gmail.com
 
 # Índice
