@@ -1,4 +1,4 @@
-# Dieta+ - Projeto PO
+# Dieta+ -> Projeto PO
 > Sua dieta + personalizada! Projeto de realização do Trabalho Prático II, da disciplina de Pesquisa Operacional.
 
 ## Desenvolvedores
