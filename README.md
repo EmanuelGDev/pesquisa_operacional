@@ -18,26 +18,26 @@
 -[**Samuel Monteiro**](https://github.com/EveeOliveira)
 📧 Email: samuel.coutoassuncao@gmail.com
 
-## Índice
+# Índice
 - [Instalação](#instalação)
 
-## Instalação
+# Instalação
 Passos para instalar e rodar o projeto em sua máquina:
-'''bash
-# Clone este repositório em uma pasta qualquer
+
+## Clone este repositório em uma pasta qualquer
 git clone https://github.com/EmanuelGDev/pesquisa_operacional.git
 
-# Crie um ambiente virtual python
+## Crie um ambiente virtual python
 python -m venv .venv
 
-# Ative o ambiente virtual
+## Ative o ambiente virtual
 ./.venv/Scripts/activate
 
-# Instale as dependências
+## Instale as dependências
 pip3 install -r requirements.txt
 
-# Execute o servidor local
+## Execute o servidor local
 python manage.py runserver
 
-# Abra o caminho local
+## Abra o caminho local
 http://127.0.0.1:8000/
