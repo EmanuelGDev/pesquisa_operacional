@@ -8,14 +8,18 @@
     <title>Home</title>
 
     <!--  <link rel="stylesheet" type="text/css" href="{% static 'css/reset.css' %}">  -->
-    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/principal.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@300;400;500;700&display=swap" rel="stylesheet">
+
 </head>
 <body>
     <!-- NavBar -->
     <nav>
-        <img src="" alt="Logo aqui">
-        <span>Início</span>
-        <a href="{% url 'listarAlimentos' %}">Alimentos Cadastrados</a>
+        <img src="{% static 'img/logo-dieta.png' %}" alt="Logo Dieta+">
+        <div class="nav-buttons">
+            <span>Início</span>
+            <a href="{% url 'listarAlimentos' %}">Alimentos Cadastrados</a>
+        </div>
     </nav>
     
     <!-- Conteúdo -->
@@ -26,7 +30,7 @@
         </label>
         <label>Altura:
             <input type="number" name="altura">
-        </label>   
+        </label> 
         <label>Idade:
             <input type="number" name="idade">
         </label>

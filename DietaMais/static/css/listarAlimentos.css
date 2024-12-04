@@ -1,0 +1,187 @@
+/* Reset básico */
+body, h1, table, tr, th, td, a, button {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corpo */
+body {
+    font-family: 'Urbanist', sans-serif;
+    background-color: #090618;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+    padding-top: 120px;
+}
+
+/* Navbar */
+nav {
+    width: 90vw;
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 4rem;
+    background-color: #1c1a2e;
+    position: fixed;
+    align-items: center;
+    top: 20px;
+    z-index: 1000;
+    box-sizing: border-box;
+    border-radius: 20px;
+    border-style: solid;
+    border-color: #3b3858;
+}
+
+nav div a{
+    font-weight: lighter;
+}
+
+nav img {
+    height: 50px;
+}
+
+nav a, nav span {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    margin-left: 1rem;
+}
+
+nav span {
+    color: #9B87FF;
+    cursor: default;
+}
+
+.conteudo {
+    background-color: #2E2D49; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); 
+    padding: 2rem; 
+    width: 90vw;
+    height: 60vh;
+    max-width: 1140px;
+    margin-top: 10px;
+    overflow: hidden;
+}
+
+.tabela {
+    width: 100%;
+    height: 80%;
+    overflow: auto;
+}
+
+/* Título */
+h1 {
+    font-size: 2rem;
+    font-weight: lighter;
+    margin-bottom: 1.5rem;
+    text-align: left;
+    color: #fff;
+}
+
+/* Tabela */
+table {
+    width: 90%;
+    max-width: 1140px;
+    border-collapse: collapse;
+    margin-bottom: 2rem;
+    text-align: left;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    background-color: #1c1a2e;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+thead tr {
+    background-color: #6E4EFF;
+    color: #fff;
+    position: sticky;
+}
+
+th, td {
+    padding: 1rem;
+    border-bottom: 1px solid #3b3858;
+    text-align: center;
+}
+
+tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* Botão deletar */
+form button {
+    padding: 0.5rem 1rem;
+    background: linear-gradient(to right, #6E4EFF, #8E7AFF);
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+form button:hover {
+    background: linear-gradient(to right, #8E7AFF, #6E4EFF);
+    box-shadow: 0 4px 15px rgba(110, 78, 255, 0.5);
+}
+
+/* Botão de cadastro */
+button {
+    padding: 0.8rem 1.5rem;
+    background: linear-gradient(to right, #6E4EFF, #8E7AFF);
+    border: none;
+    border-radius: 50px;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(110, 78, 255, 0.5);
+}
+
+/* Para links dentro do botão */
+button a {
+    text-decoration: none;
+    color: inherit;
+    font-weight: bold;
+    margin-top: 200px;
+}
+
+button:hover {
+    background: linear-gradient(to right, #8E7AFF, #6E4EFF);
+    box-shadow: 0 6px 20px rgba(110, 78, 255, 0.6);
+}
+
+button a:hover {
+    color: #fff; 
+}
+
+#cadastro-btn {
+    margin-top: 35px;
+    position: absolute;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #000000;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #6e4eff;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #6e4eff;
+  }

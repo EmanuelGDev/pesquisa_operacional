@@ -9,11 +9,12 @@
     <title>Cadastrar Alimento</title>
 
     <!--  <link rel="stylesheet" type="text/css" href="{% static 'css/reset.css' %}">  -->
-    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/cadastrarAlimento.css' %}">
 </head>
 <body>
     <!-- Conteúdo -->
-    <h1>Tela De cadastro</h1>
+    <img src="{% static 'img/logo-dieta.png' %}" alt="">
+
     <form method="post">
         <!-- Não apagar a tag abaixo -->
         {% csrf_token %}
