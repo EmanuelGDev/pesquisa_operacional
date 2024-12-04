@@ -1,0 +1,128 @@
+/* Reset básico */
+body, h1, table, tr, th, td, a, button {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corpo */
+body {
+    font-family: 'Urbanist', sans-serif;
+    background-color: #090618;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+    padding-top: 120px;
+}
+
+/* Navbar */
+nav {
+    width: 90vw;
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 4rem;
+    background-color: #1c1a2e;
+    position: fixed;
+    align-items: center;
+    top: 20px;
+    z-index: 1000;
+    box-sizing: border-box;
+    border-radius: 20px;
+    border-style: solid;
+    border-color: #3b3858;
+}
+
+nav img {
+    height: 50px;
+}
+
+nav a, nav span {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    margin-left: 1rem;
+}
+
+nav span {
+    color: #9B87FF;
+    cursor: default;
+}
+
+/* Título */
+h1 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    color: #9B87FF;
+}
+
+/* Tabela */
+table {
+    width: 90%;
+    max-width: 1140px;
+    border-collapse: collapse;
+    margin-bottom: 2rem;
+    text-align: left;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    background-color: #1c1a2e;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+thead tr {
+    background-color: #6E4EFF;
+    color: #fff;
+}
+
+th, td {
+    padding: 1rem;
+    border-bottom: 1px solid #3b3858;
+    text-align: center;
+}
+
+tr:hover {
+    background-color: #2E2D49;
+    transition: background-color 0.3s ease;
+}
+
+tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* Botão deletar */
+form button {
+    padding: 0.5rem 1rem;
+    background: linear-gradient(to right, #6E4EFF, #8E7AFF);
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+form button:hover {
+    background: linear-gradient(to right, #8E7AFF, #6E4EFF);
+    box-shadow: 0 4px 15px rgba(110, 78, 255, 0.5);
+}
+
+/* Link cadastrar mais */
+a[href*='cadastrarAlimentos'] {
+    padding: 0.8rem 1.5rem;
+    background: linear-gradient(to right, #6E4EFF, #8E7AFF);
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    border-radius: 50px;
+    transition: 0.3s;
+}
+
+a[href*='cadastrarAlimentos']:hover {
+    background: linear-gradient(to right, #8E7AFF, #6E4EFF);
+    box-shadow: 0 4px 15px rgba(110, 78, 255, 0.5);
+}

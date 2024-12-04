@@ -1,0 +1,133 @@
+/* Reset básico */
+body, h1, p, ul, li, a, input, button, select {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+/* Corpo */
+body {
+    font-family: 'Urbanist', sans-serif;
+    background-color: #090618;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Navbar */
+nav {
+    width: 90vw;
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 4rem;
+    background-color: #1c1a2e;
+    position: fixed;
+    align-items: center;
+    top: 20px;
+    z-index: 1000;
+    box-sizing: border-box;
+    border-radius: 20px;
+    border-style: solid;
+    border-color: #3b3858;
+}
+
+nav img {
+    height: 50px;
+}
+
+nav-buttons {
+    justify-content: space-around;
+}
+
+nav span {
+    color: #9B87FF;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    margin-left: 1rem;
+}
+
+/* Formulário */
+form {
+    background-color: #2E2D49; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); 
+    padding: 2rem; 
+    width: 90vw;
+    height: 60vh;
+    max-width: 1140px;
+    margin-top: 130px;
+    display: grid; 
+    grid-template-columns: 1fr 1fr;
+    align-items: center;  
+    gap: 1.5rem; 
+}
+
+/* Labels */
+form label {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem; 
+    width: 100%;
+}
+
+/* Inputs e Selects */
+form input,
+form select {
+    width: 100%;
+    padding: 0.5rem; 
+    border: none; 
+    border-radius: 5px; 
+    background-color: #9f9ea4; 
+    color: #000;
+    font-size: 0.9rem; 
+    box-sizing: border-box; 
+    height: 40px;
+}
+
+/* Ajustes adicionais para Select */
+form select {
+    appearance: none; 
+    background: #9f9ea4; 
+    cursor: pointer; 
+    height: 40px;
+}
+
+/* Input e Select ao Focar */
+form input:focus,
+form select:focus {
+    box-shadow: 0 0 5px #8E7AFF;
+}
+
+
+/* Botão */
+form button {
+    grid-column: span 2;
+    padding: 0.8rem;
+    background: linear-gradient(to right, #6E4EFF, #8E7AFF); 
+    border: none;
+    border-radius: 50px;
+    color: #FFF;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s;
+    width: 50rem;
+    height: 4rem;
+    justify-self: center;
+}
+
+/* Botão ao Hover */
+form button:hover {
+    background: linear-gradient(to right, #8E7AFF, #6E4EFF); 
+    box-shadow: 0 4px 15px rgba(110, 78, 255, 0.5); 
+}
