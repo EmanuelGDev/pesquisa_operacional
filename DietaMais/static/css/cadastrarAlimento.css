@@ -12,13 +12,22 @@ body {
     color: #fff;
     display: flex;
     flex-direction: column;
-    align-items: left;
-    justify-content: left;
+    align-items: center;
+    justify-content: center;
     min-height: 100vh;
     padding: 20px;
 }
 
-img {
+/* Contêiner da logo */
+body > div {
+    width: 90vw;
+    display: flex;
+    justify-content: space-between; /* Alinha à esquerda */
+    box-sizing: border-box;
+    align-items: center;
+}
+
+div > img {
     width: 300px;
     margin-left: 0;
 }
@@ -28,12 +37,15 @@ form {
     background-color: #1C1A2E;
     padding: 2rem;
     border-radius: 15px;
-    width: 90%;
-    max-width: 500px;
+    width: 90vw;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 colunas na primeira linha */
+    grid-template-rows: auto auto auto; /* 3 linhas */
+    gap: 1rem; /* Espaço entre os itens */
+    height: 60vh;
+    overflow: hidden;
+    align-items: center;
 }
 
 /* Labels */
@@ -78,9 +90,43 @@ form button {
     text-align: center;
     transition: 0.3s;
     box-shadow: 0 4px 15px rgba(110, 78, 255, 0.5);
+    height: 50px;
+    margin-top: 21px;
 }
 
 form button:hover {
     background: linear-gradient(to right, #8E7AFF, #6E4EFF);
     box-shadow: 0 6px 20px rgba(110, 78, 255, 0.6);
+}
+
+/* Botão de cadastro */
+button {
+    padding: 0.8rem 1.5rem;
+    background: linear-gradient(to right, #6E4EFF, #8E7AFF);
+    border: none;
+    border-radius: 50px;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(110, 78, 255, 0.5);
+    height: 50px;
+}
+
+/* Para links dentro do botão */
+button a {
+    text-decoration: none;
+    color: inherit;
+    font-weight: bold;
+    margin-top: 200px;
+}
+
+button:hover {
+    background: linear-gradient(to right, #8E7AFF, #6E4EFF);
+    box-shadow: 0 6px 20px rgba(110, 78, 255, 0.6);
+}
+
+button a:hover {
+    color: #fff; 
 }

@@ -13,7 +13,12 @@
 </head>
 <body>
     <!-- Conteúdo -->
-    <img src="{% static 'img/logo-dieta.png' %}" alt="">
+    <div>
+        <img src="{% static 'img/logo-dieta.png' %}" alt="Logo Dieta+">
+        <button >
+            <a href="{% url 'listarAlimentos' %} " class="voltar-btn" >Voltar</a>
+        </button>
+    </div>
 
     <form method="post">
         <!-- Não apagar a tag abaixo -->

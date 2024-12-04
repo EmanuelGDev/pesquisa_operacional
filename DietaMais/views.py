@@ -1,3 +1,4 @@
+from asyncio.windows_events import NULL
 from django.shortcuts import render, redirect, get_object_or_404
 from django.http import HttpResponse
 from .models import Alimento
@@ -7,13 +8,16 @@ from .solver import calculoSolver
 # Create your views here.
 def principal(request):
     if request.method == "POST":
+        if request.POST.get('peso') == '' or request.POST.get('altura') == '' or request.POST.get('idade') == '':
+            return render(request, './DietaMais/principal.html')
+        
         peso = float(request.POST.get('peso', 0))
         altura = float(request.POST.get('altura', 0))
         idade = int(request.POST.get('idade', 0))
         sexo = request.POST.get('sexo')
         atividade = request.POST.get('atividade')
         objetivo = request.POST.get('objetivo')
-
+        
         calculo = calcularGET()
         get = calculo.calcular_gasto_energetico(peso=peso, altura=altura, idade=idade, sexo=sexo, nivel_atividade=atividade, objetivo=objetivo)
         nutrientes = calculo.calcular_nutrientes(get=get)
@@ -41,7 +45,7 @@ def principal(request):
             variaveis_e_resultados = zip(vetor_variaveis, vetor_resultados)
             return render(request, './DietaMais/resultado.html', {'resultado': resultado_formatado, 'variaveis_e_resultados':variaveis_e_resultados, 'resultado_solver': resultado_solver})
         else:
-            return HttpResponse("Não há melhor caso")
+            return render(request, "./DietaMais/resultado.html")
     return render(request, './DietaMais/principal.html')
 
 def resultado(request):
