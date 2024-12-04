@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from .models import Alimento
 from .calcularGET import calcularGET
+from .solver import calculoSolver
 
 # Create your views here.
 def principal(request):
@@ -20,6 +21,19 @@ def principal(request):
         for chave, valor in nutrientes.items():
             unidade = "g" if chave in ["proteinas", "carboidratos", "gorduras"] else "kcal" if chave == "calorias" else "mg"
             resultado_formatado[chave.capitalize()] = f"{valor} {unidade}"
+
+        parametros_solver = {
+            "calorias": nutrientes.get("calorias", 0),
+            "proteinas": nutrientes.get("proteinas", 0),
+            "carboidratos": nutrientes.get("carboidratos", 0),
+            "gorduras": nutrientes.get("gorduras", 0),
+            "calcio": nutrientes.get("calcio", 0),
+            "ferro": nutrientes.get("ferro", 0),
+            "vitamina_c": nutrientes.get("vitamina_c", 0),
+            "sodio": nutrientes.get("sodio", 0),
+            "magnesio": nutrientes.get("magnesio", 0),
+        }
+        cs = calculoSolver(**parametros_solver)
 
         return render(request, './DietaMais/resultado.html', {'resultado': resultado_formatado})
 
