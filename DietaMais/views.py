@@ -1,4 +1,5 @@
 from django.shortcuts import render, redirect, get_object_or_404
+from django.http import HttpResponse
 from .models import Alimento
 from .calcularGET import calcularGET
 from .solver import calculoSolver
@@ -19,6 +20,7 @@ def principal(request):
         
         resultado_formatado = {}
         for chave, valor in nutrientes.items():
+            print(chave, valor)
             unidade = "g" if chave in ["proteinas", "carboidratos", "gorduras"] else "kcal" if chave == "calorias" else "mg"
             resultado_formatado[chave.capitalize()] = f"{valor} {unidade}"
 
@@ -33,10 +35,13 @@ def principal(request):
             "sodio": nutrientes.get("sodio", 0),
             "magnesio": nutrientes.get("magnesio", 0),
         }
-        cs = calculoSolver(**parametros_solver)
 
-        return render(request, './DietaMais/resultado.html', {'resultado': resultado_formatado})
-
+        if calculoSolver(**parametros_solver):
+            vetor_variaveis, vetor_resultados, resultado_solver = calculoSolver(**parametros_solver)
+            variaveis_e_resultados = zip(vetor_variaveis, vetor_resultados)
+            return render(request, './DietaMais/resultado.html', {'resultado': resultado_formatado, 'variaveis_e_resultados':variaveis_e_resultados, 'resultado_solver': resultado_solver})
+        else:
+            return HttpResponse("Não há melhor caso")
     return render(request, './DietaMais/principal.html')
 
 def resultado(request):

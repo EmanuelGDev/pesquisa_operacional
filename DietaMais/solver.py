@@ -50,12 +50,14 @@ def calculoSolver(calorias, proteinas, carboidratos, gorduras, calcio, ferro, vi
 
     # Criar o solver
     status = solver.Solve()
+    b = []
 
     # Verifica se encontrou a solução ótima
     if status == pywraplp.Solver.OPTIMAL:
-        print('Solução ótima encontrada:')
+        resultado = solver.Objective().Value()
         for i in range(n):
-            print('Var ' + str(i), x[i].solution_value())
-        print('Valor Mínimo: R$', solver.Objective().Value())
+            b.append(x[i].solution_value())
+        return x, b, resultado
     else:
-        print('O problema não possui solução ótima.')
+        return False
+    

@@ -27,6 +27,14 @@
                 <li>{{ chave }}: {{ valor }}</li>
             {% endfor %}
         </ul>
+        <h3>As variáveis e seus resultados:</h3>
+        <ul>
+            {% for variavel, resultado in variaveis_e_resultados %}
+                <li>{{ variavel }}: {{ resultado }}</li>
+            {% endfor %}
+        </ul>
+        <h3>Solução ótima:</h3>
+        <p>{{ resultado_solver }}</p>
     {% else %}
         <p>Nenhum resultado encontrado.</p>
     {% endif %}  
