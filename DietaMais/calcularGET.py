@@ -52,23 +52,3 @@ class calcularGET:
             "magnesio": magnesio
         }
 
-'''
-calculador = calcularGET
-# Entrada do usuário
-peso = float(input("Digite seu peso (kg): "))
-altura = float(input("Digite sua altura (cm): "))
-idade = int(input("Digite sua idade (anos): "))
-sexo = input("Digite seu sexo (masculino/feminino): ").lower()
-nivel_atividade = input("Digite seu nível de atividade (sedentario/leve/moderado/intenso): ").lower()
-objetivo = input("Digite seu objetivo (manter/aumentar/diminuir): ").lower()
-
-# Cálculo
-get = calculador.calcular_gasto_energetico(peso, altura, idade, sexo, nivel_atividade, objetivo)
-nutrientes = calculador.calcular_nutrientes(get)
-
-# Exibição dos resultados
-print("\nSuas necessidades diárias são:")
-for chave, valor in nutrientes.items():
-    unidade = "g" if chave in ["proteinas", "carboidratos", "gorduras"] else "kcal" if chave == "calorias" else "mg"
-    print(f"{chave.capitalize()}: {valor} {unidade}")
-'''
